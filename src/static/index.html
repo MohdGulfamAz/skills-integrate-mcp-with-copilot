@@ -8,8 +8,30 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div class="header-content">
+        <div>
+          <h1>Mergington High School</h1>
+          <h2>Extracurricular Activities</h2>
+        </div>
+        <div class="user-menu">
+          <button id="user-icon-btn" class="user-icon-btn">👤</button>
+          <div id="login-dropdown" class="login-dropdown hidden">
+            <div id="login-form-container">
+              <div class="login-form">
+                <h3>Teacher Login</h3>
+                <input type="text" id="login-username" placeholder="Username" />
+                <input type="password" id="login-password" placeholder="Password" />
+                <button id="login-btn">Login</button>
+                <div id="login-error" class="login-error hidden"></div>
+              </div>
+            </div>
+            <div id="logout-container" class="logout-container hidden">
+              <p id="logged-in-as">Logged in as: <strong></strong></p>
+              <button id="logout-btn">Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -21,8 +43,8 @@
         </div>
       </section>
 
-      <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
+      <section id="signup-container" class="hidden">
+        <h3>Register Student (Admin Only)</h3>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
@@ -35,9 +57,13 @@
               <!-- Activity options will be loaded here -->
             </select>
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit">Register Student</button>
         </form>
         <div id="message" class="hidden"></div>
+      </section>
+
+      <section id="student-info" class="info-banner">
+        <p>👤 You are viewing as a <strong>Student</strong>. Teachers can login to register/unregister participants.</p>
       </section>
     </main>
 
